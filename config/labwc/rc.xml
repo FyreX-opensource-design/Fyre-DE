@@ -1,0 +1,73 @@
+<?xml version="1.0" ?>
+<labwc_config>
+  <keyboard>
+    <!-- The W- prefix refers to the Super key -->
+    <keybind key="W-d">
+      <action name="Execute" command="sakura" />
+    </keybind>
+    <keybind key="W-">
+      <action name="Execute" command="wofi --show drun" />
+    </keybind>
+    <keybind key="Print">
+      <action name="Execute" command="grim -g &quot;$(slurp)&quot; - | wl-copy" />
+    </keybind>
+    
+    <!-- XF86 Media Controls -->
+    <keybind key="XF86AudioPlay">
+      <action name="Execute" command="playerctl play-pause" />
+    </keybind>
+    <keybind key="XF86AudioNext">
+      <action name="Execute" command="playerctl next" />
+    </keybind>
+    <keybind key="XF86AudioPrev">
+      <action name="Execute" command="playerctl previous" />
+    </keybind>
+    <keybind key="XF86AudioStop">
+      <action name="Execute" command="playerctl stop" />
+    </keybind>
+    
+    <!-- XF86 Volume Controls -->
+    <keybind key="XF86AudioRaiseVolume">
+      <action name="Execute" command="wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%+" />
+    </keybind>
+    <keybind key="XF86AudioLowerVolume">
+      <action name="Execute" command="wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%-" />
+    </keybind>
+    <keybind key="XF86AudioMute">
+      <action name="Execute" command="wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle" />
+    </keybind>
+    
+    <!-- XF86 Brightness Controls -->
+    <keybind key="XF86MonBrightnessUp">
+      <action name="Execute" command="brightnessctl set +5%" />
+    </keybind>
+    <keybind key="XF86MonBrightnessDown">
+      <action name="Execute" command="brightnessctl set 5%-" />
+    </keybind>
+    
+    <!-- XF86 Other Function Keys -->
+    <keybind key="XF86Display">
+      <action name="Execute" command="wlr-randr --output eDP-1 --mode 1920x1080" />
+    </keybind>
+    <keybind key="XF86WLAN">
+      <action name="Execute" command="nm-connection-editor" />
+    </keybind>
+    <keybind key="XF86Calculator">
+      <action name="Execute" command="gnome-calculator" />
+    </keybind>
+    <keybind key="XF86Search">
+      <action name="Execute" command="wofi --show drun" />
+    </keybind>
+    <keybind key="XF86HomePage">
+      <action name="Execute" command="firefox" />
+    </keybind>
+    <keybind key="XF86Mail">
+      <action name="Execute" command="thunderbird" />
+    </keybind>
+
+    <!-- power button -->
+    <keybind key="XF86PowerOff">
+      <action name="Execute" command="systemctl poweroff" />
+    </keybind>
+  </keyboard>
+</labwc_config>
