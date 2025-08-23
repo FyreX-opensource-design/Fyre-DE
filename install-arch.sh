@@ -12,3 +12,5 @@ sudo pacman -Syy --needed wpctl pipewire pipewire-pulse pipewire-alsa pipewire-j
 sudo pacman -Syy --needed python3-venv python3-pip pyenv
 #idle and lock
 sudo pacman -Syy --needed swayidle gtklock
+# extra setup
+suco pacman -Syy --needed git
