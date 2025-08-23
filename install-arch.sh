@@ -1,21 +1,21 @@
 #!/bin/bash
 
 #add yay
-suco pacman -Syy --needed git base-devel
+suco pacman -Sy --needed --noconfirm git base-devel
 cd ~ && git clone https://aur.archlinux.org/yay.git
 cd ~/yay && makepkg -si
 rm -rf ~/yay
 
 #desktop
-sudo pacman -Syy --needed labwc swaybg nwg-bar
+sudo pacman -Sy --needed --noconfirm labwc swaybg nwg-bar
 #screenshotting
-sudo pacman -Syy --needed grim slurp
+sudo pacman -Sy --needed --noconfirm grim slurp
 #device control
-sudo pacman -Syy --needed playerctl brightnessctl
-yay -S --needed wlrctl
+sudo pacman -Sy --needed --noconfirm playerctl brightnessctl
+yay -S --needed --noconfirm wlrctl
 #sound
-sudo pacman -Syy --needed wpctl pipewire pipewire-pulse pipewire-alsa pipewire-jack wireplumber
+sudo pacman -Sy --needed --noconfirm wireplumber pipewire pipewire-pulse pipewire-alsa pipewire-jack wireplumber
 #wallpaper script
-sudo pacman -Syy --needed python3-venv python3-pip pyenv
+sudo pacman -Sy --needed --noconfirm python3-venv python3-pip pyenv
 #idle and lock
-sudo pacman -Syy --needed swayidle gtklock
+sudo pacman -Sy --needed --noconfirm swayidle gtklock
