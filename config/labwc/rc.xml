@@ -62,35 +62,6 @@
     <keybind key="XF86PowerOff">
       <action name="Execute" command="systemctl poweroff" />
     </keybind>
-
-        <!-- Common Desktop Shortcuts -->
-    <keybind key="W-l">
-      <action name="Execute" command="gtklock" />
-    </keybind>
-    <keybind key="W-e">
-      <action name="Execute" command="nautilus" />
-    </keybind>
-    <keybind key="W-f">
-      <action name="Execute" command="firefox" />
-    </keybind>
-    <keybind key="W-t">
-      <action name="Execute" command="sakura" />
-    </keybind>
-    <keybind key="W-m">
-      <action name="Execute" command="playerctl play-pause" />
-    </keybind>
-    <keybind key="W-Left">
-      <action name="Execute" command="playerctl previous" />
-    </keybind>
-    <keybind key="W-Right">
-      <action name="Execute" command="playerctl next" />
-    </keybind>
-    <keybind key="W-Up">
-      <action name="Execute" command="wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%+" />
-    </keybind>
-    <keybind key="W-Down">
-      <action name="Execute" command="wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%-" />
-    </keybind>
     
     <!-- Window Management -->
     <keybind key="A-F4">
