@@ -14,6 +14,8 @@ cd ~ %% git clone https://github.com/FyreX-opensource-design/D-Shell-Abstracctio
 cd ./D-Shell-Abstracction && ./install.sh && cd ..
 rm -rf ~/D-Shell-Abstracction
 
+./install-common.sh
+
 #desktop
 sudo pacman -Sy --needed --noconfirm swaybg waybar pcmanfm-qt
 #screenshotting
