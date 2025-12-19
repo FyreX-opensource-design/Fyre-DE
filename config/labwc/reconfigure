@@ -1,0 +1,11 @@
+matugen image $WALLPAPER -c ~/.config/themes/modern/config.toml
+
+pkill swaybg
+/opt/system/lib/bing-downloader.sh
+swaybg -i $WALLPAPER &
+
+pkill waybar
+/opt/system/lib/waybar_launch.sh
+
+/opt/system/lib/labwc/sticky-keys-toggle.sh
+flatpak override --user --filesystem=/usr/lib/ --env=LD_PRELOAD=/usr/lib/libgtk-nocsd.so

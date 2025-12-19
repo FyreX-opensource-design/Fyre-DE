@@ -1,0 +1,205 @@
+/* Modern Wofi Theme - Matugen Template */
+/* This template is processed by matugen to generate Material You colors */
+/* Add this template to your matugen config.toml:
+   [templates.wofi]
+   input_path = '/home/nathan/FyreDE-dotfiles/system/themes/modern/wofi/style.css.template'
+   output_path = '/home/nathan/FyreDE-dotfiles/system/themes/modern/wofi/style.css'
+*/
+
+/* Matugen Material You colors */
+@define-color bg-primary {{ palettes.primary._10.hex }};
+@define-color bg-secondary {{ palettes.primary._20.hex }};
+@define-color bg-hover {{ palettes.primary._30.hex }};
+@define-color fg-primary {{ colors.on_surface.default.hex }};
+@define-color fg-secondary {{ colors.on_surface.default.hex }};
+@define-color accent {{ palettes.primary._50.hex }};
+@define-color accent-hover {{ palettes.primary._60.hex }};
+@define-color warning {{ palettes.tertiary._50.hex }};
+@define-color error {{ palettes.error._50.hex }};
+@define-color success {{ palettes.tertiary._40.hex }};
+@define-color border-color {{ palettes.primary._40.hex }};
+
+/* Main window */
+window {
+    margin: 0px;
+    border: 1px solid @border-color;
+    border-radius: 16px;
+    background-color: @bg-primary;
+    backdrop-filter: blur(20px);
+    font-family: "JetBrains Mono Nerd Font", "Iosevka Nerd Font", monospace;
+    font-size: 14px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+}
+
+/* Input box */
+#input {
+    margin: 12px;
+    padding: 12px 16px;
+    border: 2px solid @bg-secondary;
+    border-radius: 12px;
+    color: @fg-primary;
+    background-color: @bg-secondary;
+    font-size: 15px;
+    font-weight: 500;
+    transition: all 0.2s ease;
+}
+
+#input:focus {
+    border-color: @accent;
+    background-color: @bg-hover;
+    box-shadow: 0 0 0 3px rgba(137, 180, 250, 0.1);
+}
+
+#input > * {
+    color: @fg-primary;
+}
+
+/* Scrollable list */
+#scroll {
+    margin: 0px 12px 12px 12px;
+    border: none;
+    border-radius: 12px;
+    background-color: transparent;
+}
+
+#scroll:focus {
+    border: none;
+}
+
+/* List containers */
+#inner-box {
+    margin: 0px;
+    padding: 8px;
+    border: none;
+    background-color: transparent;
+}
+
+#outer-box {
+    margin: 0px;
+    padding: 0px;
+    border: none;
+    background-color: transparent;
+}
+
+/* Individual entries */
+#entry {
+    padding: 12px 16px;
+    margin: 4px 0px;
+    border-radius: 12px;
+    background-color: transparent;
+    color: @fg-primary;
+    border: 1px solid transparent;
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+#entry:hover {
+    background-color: @bg-hover;
+    border-color: @accent;
+}
+
+#entry:selected {
+    background: linear-gradient(135deg, @accent 0%, @accent-hover 100%);
+    border-color: @accent;
+    color: @bg-primary;
+    font-weight: 600;
+    box-shadow: 0 4px 12px rgba(137, 180, 250, 0.3);
+}
+
+#entry:selected #text {
+    color: @bg-primary;
+}
+
+/* Text styling */
+#text {
+    color: @fg-primary;
+    font-size: 14px;
+    font-weight: 500;
+    margin-left: 8px;
+}
+
+#text:selected {
+    color: @bg-primary;
+    font-weight: 600;
+}
+
+/* Icon styling */
+#img {
+    margin-right: 12px;
+    border-radius: 8px;
+}
+
+#img:selected {
+    background-color: transparent;
+}
+
+/* Unselected entries on hover */
+#entry:not(:selected):hover {
+    background-color: @bg-hover;
+    border-color: @accent;
+    color: @fg-primary;
+}
+
+#entry:not(:selected):hover #text {
+    color: @fg-primary;
+}
+
+/* Selected entry icon */
+#entry:selected #img {
+    background-color: transparent;
+}
+
+/* Focused input styling */
+#input:focus {
+    border-color: @accent;
+    box-shadow: 0 0 0 3px rgba(137, 180, 250, 0.15);
+}
+
+/* Remove default focus outline */
+#entry:focus {
+    outline: none;
+}
+
+/* Smooth transitions */
+#entry,
+#input {
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Scrollbar styling (if visible) */
+scrollbar {
+    background: @bg-secondary;
+    border-radius: 8px;
+}
+
+scrollbar slider {
+    background: @accent;
+    border-radius: 8px;
+    min-width: 8px;
+}
+
+scrollbar slider:hover {
+    background: @accent-hover;
+}
+
+/* Ensure proper spacing */
+#outer-box {
+    padding: 0px;
+}
+
+#inner-box {
+    padding: 8px;
+}
+
+/* Match waybar's modern aesthetic */
+#entry {
+    margin: 2px 0px;
+}
+
+#entry:first-child {
+    margin-top: 0px;
+}
+
+#entry:last-child {
+    margin-bottom: 0px;
+}
+

@@ -1,0 +1,5 @@
+[screencast]
+chooser_type=dmenu
+chooser_cmd=/bin/sh -c 'wofi --show dmenu -p "Select screen" --style "$WOFI_THEME"/wofi/style.css'
+screencast_enable_window_selection=true
+targets=window,monitor

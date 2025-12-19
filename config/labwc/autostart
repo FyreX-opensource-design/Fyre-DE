@@ -1,0 +1,26 @@
+matugen image $WALLPAPER -c ~/.config/themes/modern/config.toml
+
+swaync &
+
+lxqt-policykit-agent &
+
+/opt/system/lib/waybar_launch.sh
+
+wl-paste --type text --watch cliphist store &
+wl-paste --type image --watch cliphist store &
+
+dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP WOFI_THEME
+
+/opt/system/lib/bing-downloader.sh
+swaybg -i $WALLPAPER &
+shikane &
+
+swayidle -w \
+  timeout 300 '/opt/system/lib/gtklock-check.sh' \
+  timeout 600 '/opt/system/lib/gtklock-check.sh' \
+  before-sleep '/opt/system/lib/gtklock-check.sh' \
+  &
+exec sway-audio-idle-inhibit
+
+/opt/system/lib/labwc/sticky-keys-toggle.sh
+flatpak override --user --filesystem=/usr/lib/ --env=LD_PRELOAD=/usr/lib/libgtk-nocsd.so
