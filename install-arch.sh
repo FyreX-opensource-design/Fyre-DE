@@ -10,7 +10,7 @@ cd ~ && git clone https://github.com/FyreX-opensource-design/labwc
 cd ~/labwc && makepkg -si
 cd ~ && rm -rf ~/yay
 
-cd ~ %% git clone https://github.com/FyreX-opensource-design/D-Shell-Abstracction
+cd ~ && git clone https://github.com/FyreX-opensource-design/D-Shell-Abstracction
 cd ./D-Shell-Abstracction && ./install.sh && cd ..
 rm -rf ~/D-Shell-Abstracction
 
