@@ -6,12 +6,12 @@
 # See matugen documentation for available options
 
 [templates.waybar]
-input_path = '/home/nathan/FyreDE-dotfiles/system/themes/modern/waybar/style.css.template'
-output_path = '/home/nathan/FyreDE-dotfiles/system/themes/modern/waybar/style.css'
+input_path = '~/.config/themes/modern/waybar/style.css.template'
+output_path = '~/.config/themes/modern/waybar/style.css'
 
 [templates.wofi]
-input_path = '/home/nathan/FyreDE-dotfiles/system/themes/modern/wofi/style.css.template'
-output_path = '/home/nathan/FyreDE-dotfiles/system/themes/modern/wofi/style.css'
+input_path = '~/.config/themes/modern/wofi/style.css.template'
+output_path = '~/.config/themes/modern/wofi/style.css'
 
 # Optional: Add post_hook to reload waybar after generation
 # [templates.waybar]
