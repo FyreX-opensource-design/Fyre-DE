@@ -8,7 +8,7 @@ cd ~ && rm -rf ~/yay
 
 cd ~ && git clone https://github.com/FyreX-opensource-design/labwc
 cd ~/labwc && meson setup build/ && meson compile -C build/
-cd ~ && rm -rf ~/yay
+cd ~ && rm -rf ~/labwc
 
 cd ~ && git clone https://github.com/FyreX-opensource-design/D-Shell-Abstracction
 cd ./D-Shell-Abstracction && ./install.sh && cd ..
