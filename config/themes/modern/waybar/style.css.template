@@ -1,0 +1,292 @@
+/* Modern Waybar Theme - Matugen Template */
+/* This template is processed by matugen to generate Material You colors */
+/* Add this template to your matugen config.toml:
+   [templates.waybar]
+   input_path = '/home/nathan/FyreDE-dotfiles/system/themes/modern/waybar/style.css.template'
+   output_path = '/home/nathan/FyreDE-dotfiles/system/themes/modern/waybar/style.css'
+*/
+
+/* Matugen Material You colors */
+@define-color bg-primary {{ palettes.primary._10.hex }};
+@define-color bg-secondary {{ palettes.primary._20.hex }};
+@define-color bg-hover {{ palettes.primary._30.hex }};
+@define-color fg-primary {{ colors.on_surface.default.hex }};
+@define-color fg-secondary {{ colors.on_surface.default.hex }};
+@define-color accent {{ palettes.primary._50.hex }};
+@define-color accent-hover {{ palettes.primary._60.hex }};
+@define-color warning {{ palettes.tertiary._50.hex }};
+@define-color error {{ palettes.error._50.hex }};
+@define-color success {{ palettes.tertiary._40.hex }};
+@define-color purple {{ palettes.tertiary._40.hex }};
+@define-color pink {{ palettes.tertiary._60.hex }};
+@define-color teal {{ palettes.primary._60.hex }};
+@define-color red {{ palettes.error._40.hex }};
+@define-color yellow {{ palettes.tertiary._50.hex }};
+@define-color green {{ palettes.tertiary._30.hex }};
+@define-color blue {{ palettes.primary._50.hex }};
+
+* {
+    font-family: "JetBrains Mono Nerd Font", "Iosevka Nerd Font", monospace;
+    font-size: 13px;
+    font-weight: 500;
+}
+
+window#waybar {
+    background: @bg-primary;
+    color: @fg-primary;
+    border-bottom: 1px solid @fg-secondary;
+    border-radius: 0;
+    transition: none;
+    opacity: 0.95;
+}
+
+window#waybar.hidden {
+    opacity: 0.6;
+}
+
+/* Module containers */
+.modules-left,
+.modules-center,
+.modules-right {
+    padding: 0 8px;
+}
+
+/* Launcher */
+#custom-launcher {
+    font-size: 20px;
+    padding: 0 12px;
+    margin: 0 4px;
+    color: @accent;
+    background: @bg-secondary;
+    border-radius: 12px;
+    transition: all 0.3s ease;
+}
+
+#custom-launcher:hover {
+    background: @bg-hover;
+    color: @accent-hover;
+}
+
+/* Workspaces */
+#workspaces {
+    padding: 0 4px;
+    margin: 0 4px;
+    background: @bg-secondary;
+    border-radius: 12px;
+}
+
+#workspaces button {
+    padding: 0 8px;
+    margin: 4px 2px;
+    color: @fg-secondary;
+    background: transparent;
+    border-radius: 8px;
+    transition: all 0.2s ease;
+    font-size: 16px;
+}
+
+#workspaces button:hover {
+    background: @bg-hover;
+    color: @fg-primary;
+}
+
+#workspaces button.active {
+    background: @accent;
+    color: @bg-primary;
+    font-weight: 600;
+}
+
+#workspaces button.urgent {
+    background: @error;
+    color: @bg-primary;
+}
+
+/* Taskbar */
+#taskbar {
+    padding: 0 4px;
+    margin: 0 4px;
+    background: @bg-secondary;
+    border-radius: 12px;
+}
+
+#taskbar button {
+    padding: 4px 8px;
+    margin: 2px;
+    border-radius: 8px;
+    background: transparent;
+    transition: all 0.2s ease;
+}
+
+#taskbar button:hover {
+    background: @bg-hover;
+}
+
+#taskbar button.active {
+    background: @accent;
+    color: @bg-primary;
+}
+
+/* Wireplumber */
+#wireplumber {
+    padding: 0 12px;
+    margin: 0 4px;
+    background: @bg-secondary;
+    border-radius: 12px;
+    color: @fg-primary;
+    transition: all 0.2s ease;
+}
+
+#wireplumber:hover {
+    background: @bg-hover;
+    color: @accent;
+}
+
+#wireplumber.muted {
+    background: @error;
+    color: @bg-primary;
+}
+
+/* Network */
+#network {
+    padding: 0 12px;
+    margin: 0 4px;
+    background: @bg-secondary;
+    border-radius: 12px;
+    color: @fg-primary;
+    transition: all 0.2s ease;
+}
+
+#network:hover {
+    background: @bg-hover;
+    color: @teal;
+}
+
+#network.disconnected {
+    background: @error;
+    color: @bg-primary;
+}
+
+/* CPU */
+#cpu {
+    padding: 0 12px;
+    margin: 0 4px;
+    background: @bg-secondary;
+    border-radius: 12px;
+    color: @fg-primary;
+    transition: all 0.2s ease;
+}
+
+#cpu:hover {
+    background: @bg-hover;
+    color: @yellow;
+}
+
+/* Memory */
+#memory {
+    padding: 0 12px;
+    margin: 0 4px;
+    background: @bg-secondary;
+    border-radius: 12px;
+    color: @fg-primary;
+    transition: all 0.2s ease;
+}
+
+#memory:hover {
+    background: @bg-hover;
+    color: @green;
+}
+
+/* Battery */
+#battery {
+    padding: 0 12px;
+    margin: 0 4px;
+    background: @bg-secondary;
+    border-radius: 12px;
+    color: @fg-primary;
+    transition: all 0.2s ease;
+}
+
+#battery:hover {
+    background: @bg-hover;
+    color: @green;
+}
+
+#battery.charging,
+#battery.plugged {
+    background: @green;
+    color: @bg-primary;
+}
+
+#battery.warning:not(.charging) {
+    background: @warning;
+    color: @bg-primary;
+}
+
+#battery.critical:not(.charging) {
+    background: @error;
+    color: @bg-primary;
+}
+
+/* Clock */
+#clock {
+    padding: 0 12px;
+    margin: 0 4px;
+    background: @bg-secondary;
+    border-radius: 12px;
+    color: @fg-primary;
+    font-weight: 600;
+    transition: all 0.2s ease;
+}
+
+#clock:hover {
+    background: @bg-hover;
+    color: @accent;
+}
+
+/* Tray */
+#tray {
+    padding: 0 8px;
+    margin: 0 4px;
+    background: @bg-secondary;
+    border-radius: 12px;
+}
+
+#tray > .passive {
+    -gtk-icon-effect: dim;
+    opacity: 0.6;
+}
+
+#tray > .needs-attention {
+    -gtk-icon-effect: highlight;
+    background: @error;
+    border-radius: 8px;
+    padding: 2px 4px;
+}
+
+/* Tooltip */
+tooltip {
+    background: @bg-primary;
+    border: 1px solid @accent;
+    border-radius: 8px;
+    padding: 8px;
+    color: @fg-primary;
+    font-size: 12px;
+}
+
+tooltip label {
+    color: @fg-primary;
+}
+
+/* Smooth transitions for all modules */
+#custom-launcher,
+#workspaces button,
+#taskbar button,
+#wireplumber,
+#network,
+#cpu,
+#memory,
+#battery,
+#clock {
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
