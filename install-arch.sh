@@ -7,7 +7,7 @@ cd ~/yay && makepkg -si
 cd ~ && rm -rf ~/yay
 
 cd ~ && git clone https://github.com/FyreX-opensource-design/labwc
-cd ~/labwc && makepkg -si
+cd ~/labwc && meson setup build/ && meson compile -C build/
 cd ~ && rm -rf ~/yay
 
 cd ~ && git clone https://github.com/FyreX-opensource-design/D-Shell-Abstracction
@@ -17,17 +17,18 @@ rm -rf ~/D-Shell-Abstracction
 ./install-common.sh
 
 #desktop
-sudo pacman -Sy --needed --noconfirm swaybg waybar pcmanfm-qt
+sudo pacman -S --needed --noconfirm swaybg waybar pcmanfm-qt
 #screenshotting
-sudo pacman -Sy --needed --noconfirm grim slurp
+sudo pacman -S --needed --noconfirm grim slurp
 #device control
-sudo pacman -Sy --needed --noconfirm playerctl brightnessctl
+sudo pacman -S --needed --noconfirm playerctl brightnessctl
 #sound
-sudo pacman -Sy --needed --noconfirm wireplumber pipewire pipewire-pulse pipewire-alsa pipewire-jack wireplumber
+sudo pacman -S --needed --noconfirm wireplumber pipewire pipewire-pulse pipewire-alsa pipewire-jack wireplumber
 #idle and lock
-sudo pacman -Sy --needed --noconfirm swayidle gtklock gtklock-powerbar-module
+sudo pacman -S --needed --noconfirm swayidle gtklock gtklock-powerbar-module
 #XDG
-sudo pacman -Sy --needed --noconfirm xdg-utils xdg-desktop-portal xdg-desktop-portal-gtk xdg-desktop-portal-wlr
+sudo pacman -S --needed --noconfirm xdg-utils xdg-desktop-portal xdg-desktop-portal-gtk xdg-desktop-portal-wlr
 
 yay -S --noconfirm dotool
 yay -S --noconfirm wlrctl
+yay -S --coconfirm shikane
